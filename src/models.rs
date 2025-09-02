@@ -252,6 +252,10 @@ pub enum Event {
     Milestoned,
     /// The issue or pull request was moved between columns in a project board.
     MovedColumnsInProject,
+    /// A parent issue was added to an issue.
+    ParentIssueAdded,
+    /// A parent issue was removed from an issue.
+    ParentIssueRemoved,
     /// The issue was pinned.
     Pinned,
     /// A draft pull request was marked as ready for review.
@@ -274,6 +278,10 @@ pub enum Event {
     Reviewed,
     /// Someone subscribed to receive notifications for an issue or pull request.
     Subscribed,
+    /// A sub-issue was added to an issue.
+    SubIssueAdded,
+    /// A sub-issue was removed from an issue.
+    SubIssueRemoved,
     /// The issue was transferred to another repository.
     Transferred,
     /// A user was unassigned from the issue.
