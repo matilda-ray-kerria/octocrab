@@ -214,8 +214,11 @@ pub enum Event {
     BaseRefDeleted,
     /// Not documented in the Github issue events documentation.
     BaseRefForcePushed,
+    BlockedByAdded,
+    BlockedByRemoved,
     /// The issue or pull request was blocked by another issue or pull request. This is not documented in the Github issue events documentation, but has been observed in the wild.
     BlockingAdded,
+    BlockingRemoved,
     /// The issue or pull request was closed. When the commit_id is present, it identifies the commit that closed the issue using "closes / fixes" syntax.
     Closed,
     /// A comment was added to the issue or pull request.
@@ -256,6 +259,11 @@ pub enum Event {
     HeadRefForcePushed,
     /// The pull request's HEAD branch was restored to the last known commit.
     HeadRefRestored,
+    IssueCommentUnpinned,
+    Issue,
+    IssueFieldChanged,
+    IssueFieldRemoved,
+    IssueTypeChanged,
     /// A label was added to the issue or pull request.
     Labeled,
     /// A comment on a line of source in a pull request. Not documented in the issue and events documentation.
@@ -301,6 +309,7 @@ pub enum Event {
     RemovedFromProjectV2,
     /// The issue or pull request title was changed.
     Renamed,
+    RenamedTitle,
     /// The issue or pull request was reopened.
     Reopened,
     /// The pull request review was dismissed.
